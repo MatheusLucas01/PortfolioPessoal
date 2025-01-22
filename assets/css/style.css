@@ -1,0 +1,541 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #fff;
+    padding: 5px 10%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border: 1px solid white;
+}
+
+
+h1 {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    font-family: 'DM Serif Text', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1900ff;
+}
+
+h1 img {
+    width: 80px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1900ff;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #1900ff;
+    color: white;
+}
+
+/* Botão de Menu (Hambúrguer) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #1900ff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsividade menu hamburguer*/
+@media (max-width: 768px) {
+
+    /* Esconde o menu padrão */
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+    }
+
+    .menu ul.active {
+        display: flex;
+    }
+
+    .menu ul li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Exibe o botão de hambúrguer */
+    .menu-toggle {
+        display: flex;
+
+    }
+
+    /* Animação do botão de hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1900ff, #000000);
+    color: #fff;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    font-family: 'DM Serif Text', serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.botao {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #1900ff;
+    transform: scale(1.1) translateY(-5px);
+    animation: float 1s infinite alternate;
+    
+    
+}
+
+.botao a {
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+    
+}
+
+.botao:hover {
+    box-shadow: #f9f9f9;
+    box-shadow: 0 4px 5px white;
+
+}
+
+
+
+/* Seção de Habilidades */
+.habilidades {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.habilidades h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill {
+    text-align: center;
+    transition: transform 0.3s;
+
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.skill:hover {
+    transform: scale(1.1) translateY(-10px);
+    animation: float 1s infinite alternate;
+}
+
+/* Seção de Projetos */
+#projetos {
+    padding: 60px 4%;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #1900ff;
+    font-weight: 700;
+}
+
+.informacao {
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.informacao:hover {
+    transform: translateY(-5px);
+    animation: float 1s infinite alternate;
+}
+
+.informacao a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Cards */
+.cards-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Espaçamento entre os cards */
+    justify-content: space-between;
+}
+
+
+/* Cards Individuais */
+.box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    /* Largura dinâmica */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px #0077b6;
+}
+
+/* Ativação da animação */
+.box.aparecer {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Cobertura e imagem */
+.cover {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.9;
+}
+
+.cover:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    /* Esconde detalhes inicialmente */
+    transition: opacity 0.3s ease;
+}
+
+.box:hover .details {
+    opacity: 1;
+}
+
+.mini-languages {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mini-languages img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.link {
+    display: block;
+    margin: 8px auto;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: 2px solid #1900ff;
+    text-align: center;
+}
+
+.link a {
+    text-decoration: none;
+    color: #1900ff;
+}
+
+
+/* Contato */
+.contato {
+    padding: 60px 4%;
+    /* Espaçamento interno */
+    background-color: #f9f9f9;
+    text-align: center;
+    border-top: 2px solid #1900ff;
+    /* Barra decorativa superior */
+}
+
+.contato .subtitulo {
+    font-size: 2.2rem;
+    /* Tamanho ajustado para maior impacto */
+    color: #1900ff;
+    margin-bottom: 15px;
+    /* Espaço maior abaixo do subtítulo */
+    font-weight: 700;
+    /* Negrito para destacar o subtítulo */
+}
+
+.contato p {
+    font-size: 1.2rem;
+    /* Fonte um pouco maior para melhorar a leitura */
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    /* Melhor espaçamento entre linhas */
+}
+
+.menu-contato {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espaço entre os itens */
+    flex-wrap: wrap;
+    /* Quebra os itens em telas pequenas */
+}
+
+.menu-contato li {
+    display: inline-block;
+    margin-bottom: 10px;
+    /* Espaçamento vertical em telas menores */
+}
+
+.menu-contato a {
+    text-decoration: none;
+    color: #1900ff;
+    font-size: 1.2rem;
+    /* Aumenta o tamanho da fonte para melhor visibilidade */
+    transition: all 0.3s ease;
+    /* Transição para hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza o conteúdo */
+    gap: 10px;
+    /* Espaço entre o ícone e o texto */
+    padding: 10px 15px;
+    /* Adiciona área clicável ao link */
+    border: 1px solid #1900ff;
+    /* Adiciona borda ao redor dos links */
+    border-radius: 30px;
+    /* Bordas arredondadas */
+}
+
+.menu-contato a i {
+    font-size: 1.5rem;
+    /* Tamanho do ícone */
+    color: #1900ff;
+    /* Cor do ícone */
+}
+
+.menu-contato a:hover {
+    background-color: #1900ff;
+    /* Fundo azul no hover */
+    color: #fff;
+    /* Cor do texto no hover */
+    border-color: #005f87;
+    /* Borda com tom mais escuro */
+}
+
+.menu-contato a:hover i {
+    color: #fff;
+    /* Ícone muda para branco no hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 40px 20px;
+    color: #1900ff;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-contato {
+        flex-direction: column;
+        /* Alinha os itens verticalmente */
+        gap: 15px;
+        /* Ajusta o espaçamento vertical */
+    }
+
+    .box {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 375px) {
+    .rodape p {
+        font-size: 18px;
+        display: block;
+    }
+
+}
+
+/* Ajustes para Telas Pequenas */
+@media (max-width: 768px) {}
+
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+        /* 1 card por linha */
+    }
+}
+
+@media (max-width: 375px) {
+
+    .hero h2,
+    p {
+        font-size: 40px;
+        padding: 5px;
+
+    }
+}
+
+/* Animação de Entradas */
+.box.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação dos box */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animação */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
