@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Função que faz o nome aparecer na tela
   const text = "Matheus Lucas";
   let index = 0;
-  const speed = 250; // Speed of typing
+  const speed = 150; // Speed of typing
 
   function typeWriter() {
       if (index < text.length) {

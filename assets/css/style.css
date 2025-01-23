@@ -80,6 +80,8 @@ h1 img {
     transition: all 0.3s ease;
 }
 
+
+
 /* Responsividade menu hamburguer*/
 @media (max-width: 768px) {
 
@@ -99,19 +101,20 @@ h1 img {
     .menu ul.active {
         display: flex;
     }
-
     .menu ul li {
         text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-
+    
     /* Exibe o botão de hambúrguer */
     .menu-toggle {
         display: flex;
-
+        position: absolute;
+        right: 50px;
+        
     }
-
+    
     /* Animação do botão de hambúrguer */
     .menu-toggle.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -174,8 +177,6 @@ h1 img {
     box-shadow: 0 4px 5px white;
 
 }
-
-
 
 /* Seção de Habilidades */
 .habilidades {
@@ -480,7 +481,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {}
+
 
 @media (max-width: 375px) {
     .rodape p {
@@ -504,9 +505,8 @@ footer {
 
     .hero h2,
     p {
-        font-size: 40px;
+        font-size: 35px;
         padding: 5px;
-
     }
 }
 
