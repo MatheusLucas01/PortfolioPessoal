@@ -65,23 +65,39 @@ window.addEventListener('scroll', mostrarCards);
 mostrarCards();
 
 // Seleciona o botão de hambúrguer e o menu
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu ul');
 
-// Adiciona evento de clique no botão de hambúrguer
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active'); // Alterna a classe 'active' no menu
-    menuToggle.classList.toggle('active'); // Anima o botão de hambúrguer
-});
 
 
 // Sanitize input parameters dynamically (if needed)
 const email = "matheuslucasdesouza22@gmail.com"; // Destinatário do email
 const subject = encodeURIComponent("Assunto"); // Assunto do email
-const body = encodeURIComponent("Mensagem inicial do email."); // Corpo do email
+const body = encodeURIComponent("Olá, vim pelo botão de email"); // Corpo do email
 
 // Montar link seguro com parâmetros codificados
 const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
 
-// Aplicar o link ao botão dinamicamente
-document.querySelector('.menu-contato a').href = gmailLink;
+
+
+// Espera o DOM ser carregado antes de manipular os elementos
+document.addEventListener("DOMContentLoaded", function() {
+  // Seleciona o botão de menu (hambúrguer) e o menu
+  const menuToggle = document.getElementById("menu-toggle");
+  const menu = document.querySelector(".menu ul");
+  const menuLinks = document.querySelectorAll(".menu ul li a"); // Todos os links do menu
+
+  // Alterna a classe active para abrir ou fechar o menu
+  menuToggle.addEventListener("click", function() {
+    menu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Fecha o menu ao clicar em qualquer link
+  menuLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+      menu.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+});
+
+

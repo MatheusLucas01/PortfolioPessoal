@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -19,7 +18,7 @@ body {
     align-items: center;
     background-color: #f9f9f9;
     color: #fff;
-    padding: 5px 10%;
+    padding: 0 10%;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -80,8 +79,6 @@ h1 img {
     transition: all 0.3s ease;
 }
 
-
-
 /* Responsividade menu hamburguer*/
 @media (max-width: 768px) {
 
@@ -95,7 +92,7 @@ h1 img {
         right: 0;
         width: 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
+        padding: 0 5px;
     }
 
     .menu ul.active {
@@ -111,8 +108,7 @@ h1 img {
     .menu-toggle {
         display: flex;
         position: absolute;
-        right: 50px;
-        
+        right: 20px;
     }
     
     /* Animação do botão de hambúrguer */
@@ -128,8 +124,6 @@ h1 img {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
-
 
 /* Hero Section */
 .hero {
@@ -159,8 +153,6 @@ h1 img {
     background-color: #1900ff;
     transform: scale(1.1) translateY(-5px);
     animation: float 1s infinite alternate;
-    
-    
 }
 
 .botao a {
@@ -169,13 +161,11 @@ h1 img {
     padding: 8px;
     color: white;
     border-radius: 10px;
-    
 }
 
 .botao:hover {
     box-shadow: #f9f9f9;
     box-shadow: 0 4px 5px white;
-
 }
 
 /* Seção de Habilidades */
@@ -362,7 +352,6 @@ h1 img {
     color: #1900ff;
 }
 
-
 /* Contato */
 .contato {
     padding: 60px 4%;
@@ -374,7 +363,7 @@ h1 img {
 }
 
 .contato .subtitulo {
-    font-size: 2.2rem;
+    font-size: 2rem;
     /* Tamanho ajustado para maior impacto */
     color: #1900ff;
     margin-bottom: 15px;
@@ -395,9 +384,8 @@ h1 img {
 .menu-contato {
     list-style: none;
     padding: 0;
-    display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     /* Espaço entre os itens */
     flex-wrap: wrap;
     /* Quebra os itens em telas pequenas */
@@ -481,8 +469,6 @@ footer {
     }
 }
 
-
-
 @media (max-width: 375px) {
     .rodape p {
         font-size: 18px;
@@ -492,7 +478,6 @@ footer {
 }
 
 /* Ajustes para Telas Pequenas */
-@media (max-width: 768px) {}
 
 @media (max-width: 480px) {
     .box {
