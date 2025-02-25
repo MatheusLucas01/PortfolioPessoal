@@ -72,10 +72,7 @@ const Hero = () => {
               }}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-sky-900 rounded-xl"
             >
-              <a
-                href="./public/CV_Matheus_Lucas.pdf"
-                download="CV_Matheus_Lucas.pdf"
-              >
+              <a href="/CV_Matheus_Lucas.pdf" download="CV_Matheus_Lucas.pdf">
                 Download CV
               </a>
             </motion.button>
