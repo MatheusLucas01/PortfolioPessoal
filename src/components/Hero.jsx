@@ -36,7 +36,7 @@ const Hero = () => {
             ]}
             speed={50}
             repeat={Infinity}
-            className="font-bold text-gray-400 text-xl md:text-5xl italic- mb-4"
+            className="font-bold text-gray-400 text-xl md:text-4xl italic- mb-4"
           />
 
           <motion.p
@@ -80,16 +80,31 @@ const Hero = () => {
               </a>
             </motion.button>
 
-            <div className="flex gap-6 flex-row text-4xl md:text-6xl text-blue-200 z-20">
-              <motion.a whileHover={{ scale: 1.1 }} href="#">
+            <div className="flex gap-6 flex-row text-4xl md:text-5xl text-blue-200 z-20">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://github.com/MatheusLucas01"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <AiOutlineGithub />
               </motion.a>
 
-              <motion.a whileHover={{ scale: 1.1 }} href="#">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://www.instagram.com/?hl=en"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <AiOutlineInstagram />
               </motion.a>
 
-              <motion.a whileHover={{ scale: 1.1 }} href="#">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                href="https://linkedin.com/in/matheussouza1s"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 <AiOutlineLinkedin />
               </motion.a>
             </div>

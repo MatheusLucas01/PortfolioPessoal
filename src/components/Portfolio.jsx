@@ -80,7 +80,7 @@ const Portfolio = () => {
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-full object-cover rounded-lg shadow-lg"
+                className="w-full h-full object-cover rounded-lg shadow-lg hover:bg-black"
               />
             </div>
 
