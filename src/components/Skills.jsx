@@ -1,3 +1,4 @@
+import { BiLogoGoLang } from "react-icons/bi";
 import { SiTailwindcss } from "react-icons/si";
 import Reveal from "./Reveal";
 import {
@@ -43,6 +44,7 @@ const skills = [
       },
       { name: "Python", icon: <DiPython className="text-blue-400 mx-2" /> },
       { name: "Java", icon: <DiJava className="text-blue-400 mx-2" /> },
+      { name: "Golang", icon: <BiLogoGoLang className="text-blue-700 mx-2" /> },
     ],
   },
 ];
@@ -56,10 +58,11 @@ const Skills = () => {
       <Reveal>
         <h2 className="text-3xl font-bold mb-4 text-center">Habilidades</h2>
         <p className=" text-justify mb-8 mx-auto max-w-[800px] ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
-          <a href="#" className="underline"></a>Ipsa atque quaerat eligendi ab
-          deserunt! Deleniti voluptates omnis repudiandae aut placeat! Maxime
-          cum atque nam pariatur quod quaerat debitis vel quibusdam.
+          Desenvolvedor com experiência em React, Python, SQL e Golang.
+          Especialista em criação de interfaces dinâmicas, integração com APIs e
+          otimização de desempenho. No back-end, foco em soluções escaláveis com
+          bancos de dados SQL. Sempre em busca de inovação e aprendizado
+          contínuo.
         </p>
 
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 ">

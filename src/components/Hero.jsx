@@ -11,6 +11,7 @@ import {
   DiHtml5,
   DiJavascript1,
   DiNodejsSmall,
+  DiPython,
   DiReact,
 } from "react-icons/di";
 import { motion } from "framer-motion";
@@ -126,11 +127,12 @@ const Hero = () => {
         className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
       >
         <p className="text-gray-200 mr-6">My Tech Stack</p>
-        <DiHtml5 className="text-5xl text-orange-600 mx-2" />
-        <DiCss3 className="text-5xl text-blue-600 mx-2" />
-        <DiJavascript1 className="text-5xl text-yellow-400 mx-2" />
-        <DiReact className="text-5xl text-blue-400 mx-2" />
-        <DiNodejsSmall className="text-5xl text-green-400 mx-2" />
+        <DiHtml5 className="text-5xl text-orange-600 mx-2 animate-bounce" />
+        <DiCss3 className="text-5xl text-blue-600 mx-2 animate-bounce" />
+        <DiJavascript1 className="text-5xl text-yellow-400 mx-2 animate-bounce" />
+        <DiReact className="text-5xl text-blue-400 mx-2 animate-bounce" />
+        <DiNodejsSmall className="text-5xl text-green-400 mx-2 animate-bounce" />
+        <DiPython className="text-5xl text-blue-400 mx-2 animate-bounce" />
       </motion.div>
 
       <div className="absolute inset-0 hidden md:block">

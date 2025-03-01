@@ -65,7 +65,7 @@ function Contact() {
               id="nome"
               placeholder="Seu nome..."
               name="nome"
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md border border-blue-600 py-2 pl-2 pr-4"
             />
 
             <input
@@ -73,7 +73,7 @@ function Contact() {
               id="email"
               placeholder="Seu E-mail..."
               name="email"
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md border border-blue-600 py-2 pl-2 pr-4"
             />
 
             <textarea
@@ -82,7 +82,7 @@ function Contact() {
               cols="30"
               rows="4"
               placeholder="Sua mensagem..."
-              className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
+              className="mb-2 w-full rounded-md border border-blue-600 py-2 pl-2 pr-4"
             />
 
             <button

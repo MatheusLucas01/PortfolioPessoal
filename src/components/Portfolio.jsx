@@ -1,5 +1,5 @@
 import projeto1 from "../assets/projeto1.png";
-import projeto2 from "../assets/projeto1.png";
+import projeto2 from "../assets/projeto2.png";
 // import projeto3 from "../assets/projeto2.png";
 // import projeto4 from "../assets/projeto2.png";
 // import projeto5 from "../assets/projeto2.png";
@@ -12,14 +12,15 @@ const projects = [
     title: "Projeto #1",
     description: "Lista de Tarefas Simples, feita 100% em Python",
     links: {
-      site: "https://matheuslucas01.github.io/DevLinks/",
-      github: "https://github.com/MatheusLucas01/DevLinks",
+      site: "http://listadetarefas.streamlit.app/",
+      github: "https://github.com/MatheusLucas01/ListaDeTarefas",
     },
   },
   {
     img: projeto2,
     title: "Projeto #2",
-    description: "Lista de Tarefas Simples, feita 100% em Python",
+    description:
+      "DevLinks, landing page para apresentar os links das minhas redes de contato",
     links: {
       site: "https://matheuslucas01.github.io/DevLinks/",
       github: "https://github.com/MatheusLucas01/DevLinks",
@@ -76,7 +77,7 @@ const Portfolio = () => {
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } mb-12`}
           >
-            <div className="w-full md:w-1/2 p-4">
+            <div className="w-full md:w-1/2 p-2 ">
               <img
                 src={project.img}
                 alt={project.title}
