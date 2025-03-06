@@ -11,10 +11,11 @@ function Contact() {
                 Sobre <span> mim </span>{" "}
               </h3>
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Veritatis quam atque perferendis reprehenderit animi magni
-                accusamus, alias illo deserunt deleniti consectetur eligendi, id
-                reiciendis voluptatum unde ea recusandae sequi tempora.
+                Desenvolvedor focado em criar interfaces dinâmicas e intuitivas
+                com React, além de trabalhar com Python, SQL e Golang no
+                back-end. Tenho experiência em integrações, otimização de
+                desempenho e soluções escaláveis. Sempre buscando aprendizado e
+                inovação. 🚀
               </p>
             </div>
 
@@ -38,7 +39,7 @@ function Contact() {
                 </p>
               </div>
 
-              <div className="bg-gray-800/40 p-5 rounded-lg">
+              {/* <div className="bg-gray-800/40 p-5 rounded-lg">
                 <h3 className="md:text-4xl text-2xl font-semibold text-white">
                   30
                   <span>+</span>
@@ -46,7 +47,7 @@ function Contact() {
                 <p className="text-xs md:text-base">
                   <span> Clientes felizes</span>
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -1,11 +1,7 @@
-import profile from "../assets/profile.jpg";
+import avatar from "../assets/avatar.png";
 import { TypeAnimation } from "react-type-animation";
 import Effects from "./Effects";
-import {
-  AiOutlineGithub,
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-} from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 import {
   DiCss3,
   DiHtml5,
@@ -90,15 +86,6 @@ const Hero = () => {
 
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://www.instagram.com/?hl=en"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <AiOutlineInstagram />
-              </motion.a>
-
-              <motion.a
-                whileHover={{ scale: 1.1 }}
                 href="https://linkedin.com/in/matheussouza1s"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -110,8 +97,8 @@ const Hero = () => {
         </motion.div>
 
         <motion.img
-          src={profile}
-          className="w-[300px] md:w-[450px] border-4 border-sky-900 rounded-xl"
+          src={avatar}
+          className="w-[300px] md:w-[450px] rounded-xl"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
