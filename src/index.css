@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Playfair Display", Playfair Display;
+  background-color: rgba(14, 22, 29, 255);
+}
+
+h2 {
+  @apply text-xl md:text-4xl;
+}
+
+p {
+  @apply text-xl tracking-tight leading-relaxed;
+}
+
+span {
+  @apply text-sky-500;
+}
+
+.effects {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    circle,
+    rgba(12, 22, 59, 255) 4%,
+    rgba(255, 255, 255, 0) 40%
+  );
+}
+/* Cor do botão */
+.bg-primary-color {
+  @apply bg-sky-800/80 hover:bg-sky-700;
+}
