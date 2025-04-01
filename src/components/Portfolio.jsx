@@ -1,12 +1,7 @@
 import projeto1 from "../assets/projeto1.png";
 import projeto2 from "../assets/projeto2.png";
 import projeto3 from "../assets/projeto3.png";
-// import projeto3 from "../assets/projeto2.png";
-// import projeto4 from "../assets/projeto2.png";
-// import projeto5 from "../assets/projeto2.png";
-// import projeto6 from "../assets/projeto2.png";
 import { FaGithub } from "react-icons/fa";
-
 import {
   DiCss3,
   DiHtml5,
@@ -16,19 +11,19 @@ import {
   DiReact,
 } from "react-icons/di";
 import Reveal from "./Reveal";
+import { div } from "framer-motion/client";
+
 const projects = [
   {
     img: projeto1,
     title: "Projeto #1",
-    description: "Lista de Tarefas Simples, feita 100% em Python",
+    description: "Lista de Tarefas Simples",
     links: {
       site: "http://listadetarefas.streamlit.app/",
       github: "https://github.com/MatheusLucas01/ListaDeTarefas",
-      linguagens_projeto1: {
-        DiPython,
-      },
-
+      linguagens: [DiPython],
     },
+
   },
   {
     img: projeto2,
@@ -36,65 +31,23 @@ const projects = [
     description:
       "DevLinks, landing page para apresentar os links das minhas redes de contato",
     links: {
-    site: "https://matheuslucas01.github.io/DevLinks/",
-    github: "https://github.com/MatheusLucas01/DevLinks",
-    linguagens_projeto2: {
-        DiHtml5,
-        DiCss3,
-        DiJavascript1,
-      }
+      site: "https://matheuslucas01.github.io/DevLinks/",
+      github: "https://github.com/MatheusLucas01/DevLinks",
+      linguagens: [DiHtml5, DiCss3, DiJavascript1],
     },
   },
-   {
+  {
     img: projeto3,
     title: "Projeto #3",
-    description: "Tela de Login, feita com React e CSS",
+    description: "Tela de Login",
     links: {
-    site: "https://tela-login-azure.vercel.app/",
-    github: "https://github.com/MatheusLucas01/Tela_Login",
-    linguagens_projeto3: {
-        DiReact,
-        DiCss3,
-      }
+      site: "https://tela-login-azure.vercel.app/",
+      github: "https://github.com/MatheusLucas01/Tela_Login",
+      linguagens: [DiReact, DiCss3],
     },
-   },
-  // {
-  //   img: projeto3,
-  //   title: "Projeto 1",
-  //   desciption: "Lista de Tarefas Simples, feita 100% em Python",
-  //   links: {
-  //     site: "https://matheuslucas01.github.io/DevLinks/",
-  //     github: "https://github.com/MatheusLucas01/DevLinks",
-  //   },
-  // },
-  // {
-  //   img: projeto4,
-  //   title: "Projeto 1",
-  //   desciption: "Lista de Tarefas Simples, feita 100% em Python",
-  //   links: {
-  //     site: "https://matheuslucas01.github.io/DevLinks/",
-  //     github: "https://github.com/MatheusLucas01/DevLinks",
-  //   },
-  // },
-  // {
-  //   img: projeto5,
-  //   title: "Projeto 1",
-  //   desciption: "Lista de Tarefas Simples, feita 100% em Python",
-  //   links: {
-  //     site: "https://matheuslucas01.github.io/DevLinks/",
-  //     github: "https://github.com/MatheusLucas01/DevLinks",
-  //   },
-  // },
-  // {
-  //   img: projeto6,
-  //   title: "Projeto 1",
-  //   desciption: "Lista de Tarefas Simples, feita 100% em Python",
-  //   links: {
-  //     site: "https://matheuslucas01.github.io/DevLinks/",
-  //     github: "https://github.com/MatheusLucas01/DevLinks",
-  //   },
-  // },
+  },
 ];
+
 const Portfolio = () => {
   return (
     <div className="max-w-[1000px] mx-auto p-6 md:my-20" id="portfolio">
@@ -104,29 +57,19 @@ const Portfolio = () => {
       {projects.map((project, index) => (
         <Reveal key={index}>
           <div
-            key={index}
             className={`flex flex-col md:flex-row ${
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } mb-12`}
           >
-          </div>
-
             <div className="w-full md:w-1/2 p-2">
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-slate-500/20"
               />
-
-            <div className="w-full md:w-1/2 p-2 ">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-full object-cover rounded-lg shadow-lg hover:bg-black"
-              />
             </div>
 
-            <div className="w-full md:w-1/2 p-4 flex flex-col justify-center ">
+            <div className="w-full md:w-1/2 p-4 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-gray-200 mb-4">
                 {project.title}
               </h3>
@@ -150,39 +93,29 @@ const Portfolio = () => {
                   <FaGithub />
                 </a>
 
-                {/* PROJETO 1 */}
-                {project.links.linguagens_projeto1 && (
-                  <div className="flex gap-2 text-3xl"> 
-                    <p>
-                    <DiPython className="text-5xl text-yellow-400 mx-2 animate-pulse" />
-                    </p>
-                  </div>
-                )}
-
-                {/* PROJETO 2 */}
-                {project.links.linguagens_projeto2 && (
-                  <div className="flex gap-2 text-3xl"> 
-                    <p>
-                    <DiHtml5 className="text-5xl text-red-500 mx-2 animate-pulse" />
-                    </p>
-                    <p>
-                    <DiCss3 className="text-5xl text-blue-500 mx-2 animate-pulse" />
-                    </p>
-                    <p>
-                    <DiJavascript1 className="text-5xl text-yellow-400 mx-2 animate-pulse" />
-                    </p>
-                  </div>
-                )}
-
-                {/* PROJETO 3 */}
-                {project.links.linguagens_projeto3 && (
-                  <div className="flex gap-2 text-3xl"> 
-                    <p>
-                    <DiReact className="text-5xl text-blue-400 mx-2 animate-pulse" />
-                    </p>
-                    <p>
-                    <DiCss3 className="text-5xl text-blue-500 mx-2 animate-pulse" />
-                    </p>
+                {/* Exibindo as linguagens */}
+                {project.links.linguagens && (
+                  <div className="flex gap-2 text-3xl">
+                    {project.links.linguagens.map((LinguagemIcon, i) => (
+                      <LinguagemIcon
+                        key={i}
+                        className={`text-5xl mx-2 ${
+                          LinguagemIcon === DiPython
+                            ? "text-blue-400"
+                            : LinguagemIcon === DiHtml5
+                            ? "text-orange-600"
+                            : LinguagemIcon === DiCss3
+                            ? "text-blue-600"
+                            : LinguagemIcon === DiJavascript1
+                            ? "text-yellow-400"
+                            : LinguagemIcon === DiReact
+                            ? "text-cyan-400"
+                            : LinguagemIcon === DiNodejsSmall
+                            ? "text-green-600"
+                            : ""
+                        }`}
+                      />
+                    ))}
                   </div>
                 )}
               </div>
