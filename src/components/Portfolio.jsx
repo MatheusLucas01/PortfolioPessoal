@@ -1,10 +1,12 @@
 import projeto1 from "../assets/projeto1.png";
 import projeto2 from "../assets/projeto2.png";
 import projeto3 from "../assets/projeto3.png";
+// import projeto3 from "../assets/projeto2.png";
 // import projeto4 from "../assets/projeto2.png";
 // import projeto5 from "../assets/projeto2.png";
 // import projeto6 from "../assets/projeto2.png";
 import { FaGithub } from "react-icons/fa";
+
 import {
   DiCss3,
   DiHtml5,
@@ -25,6 +27,7 @@ const projects = [
       linguagens_projeto1: {
         DiPython,
       },
+
     },
   },
   {
@@ -55,6 +58,15 @@ const projects = [
       }
     },
    },
+  // {
+  //   img: projeto3,
+  //   title: "Projeto 1",
+  //   desciption: "Lista de Tarefas Simples, feita 100% em Python",
+  //   links: {
+  //     site: "https://matheuslucas01.github.io/DevLinks/",
+  //     github: "https://github.com/MatheusLucas01/DevLinks",
+  //   },
+  // },
   // {
   //   img: projeto4,
   //   title: "Projeto 1",
@@ -97,11 +109,20 @@ const Portfolio = () => {
               index % 2 !== 0 ? "md:flex-row-reverse" : ""
             } mb-12`}
           >
+          </div>
+
             <div className="w-full md:w-1/2 p-2">
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-full object-cover rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-slate-500/20"
+              />
+
+            <div className="w-full md:w-1/2 p-2 ">
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-full object-cover rounded-lg shadow-lg hover:bg-black"
               />
             </div>
 
