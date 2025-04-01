@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 
 const experiences = [
   {
-    company: "Ainda Busco minha primeira experiência...",
+    company: "Ainda Busco minha primeira experiência....",
     period: "",
     description: "",
   },
