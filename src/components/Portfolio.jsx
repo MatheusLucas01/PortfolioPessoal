@@ -99,7 +99,7 @@ const Portfolio = () => {
                     {project.links.linguagens.map((LinguagemIcon, i) => (
                       <LinguagemIcon
                         key={i}
-                        className={`text-5xl mx-2 ${
+                        className={`text-5xl mx-2 animate-pulse ${
                           LinguagemIcon === DiPython
                             ? "text-blue-400"
                             : LinguagemIcon === DiHtml5
