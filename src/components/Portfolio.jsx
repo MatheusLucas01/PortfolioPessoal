@@ -1,6 +1,7 @@
 import projeto1 from "../assets/projeto1.png";
 import projeto2 from "../assets/projeto2.png";
 import projeto3 from "../assets/projeto3.png";
+import projeto4 from "../assets/projeto4."
 import { FaGithub } from "react-icons/fa";
 import {
   DiCss3,
@@ -9,6 +10,7 @@ import {
   DiNodejsSmall,
   DiPython,
   DiReact,
+  DiWordpress
 } from "react-icons/di";
 import Reveal from "./Reveal";
 import { div } from "framer-motion/client";
@@ -16,7 +18,7 @@ import { div } from "framer-motion/client";
 const projects = [
   {
     img: projeto1,
-    title: "Projeto #1",
+    title: "Projeto #1 - Pessoal",
     description: "Lista de Tarefas Simples",
     links: {
       site: "http://listadetarefas.streamlit.app/",
@@ -27,7 +29,7 @@ const projects = [
   },
   {
     img: projeto2,
-    title: "Projeto #2",
+    title: "Projeto #2 - Pessoal",
     description:
       "DevLinks, landing page para apresentar os links das minhas redes de contato",
     links: {
@@ -38,12 +40,21 @@ const projects = [
   },
   {
     img: projeto3,
-    title: "Projeto #3",
+    title: "Projeto #3 - Pessoal",
     description: "Tela de Login",
     links: {
       site: "https://tela-login-azure.vercel.app/",
       github: "https://github.com/MatheusLucas01/Tela_Login",
       linguagens: [DiReact, DiCss3],
+    },
+  },
+  {
+    img: projeto4,
+    title: "Projeto #4 - Institucional",
+    description: "Avante, site institucional feito com Wordpress. \n Antes de conhecer a programação",
+    links: {
+      site: "https://avantesso.com.br/",
+      linguagens: [DiWordpress],
     },
   },
 ];
@@ -112,6 +123,8 @@ const Portfolio = () => {
                             ? "text-cyan-400"
                             : LinguagemIcon === DiNodejsSmall
                             ? "text-green-600"
+                            : LinguagemIcon === DiWordpress
+                            ? "text-blue-600"
                             : ""
                         }`}
                       />
