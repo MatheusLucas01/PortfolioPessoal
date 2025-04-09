@@ -51,7 +51,7 @@ const projects = [
   {
     img: projeto4,
     title: "Projeto #4 - Institucional",
-    description: "Avante, site institucional feito com Wordpress. \n Antes de conhecer a programação",
+    description: "Avante, feito com Wordpress. \n Antes de conhecer a programação",
     links: {
       site: "https://avantesso.com.br/",
       linguagens: [DiWordpress],
