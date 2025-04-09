@@ -1,7 +1,7 @@
 import projeto1 from "../assets/projeto1.png";
 import projeto2 from "../assets/projeto2.png";
 import projeto3 from "../assets/projeto3.png";
-import projeto4 from "../assets/projeto4."
+import projeto4 from "../assets/projeto4.png"
 import { FaGithub } from "react-icons/fa";
 import {
   DiCss3,
