@@ -1,8 +1,11 @@
 import projeto1 from "../assets/projeto1.png";
 import projeto2 from "../assets/projeto2.png";
 import projeto3 from "../assets/projeto3.png";
-import projeto4 from "../assets/projeto4.png"
+import projeto4 from "../assets/projeto4.png";
+import projeto5 from "../assets/projeto5.png";
 import { FaGithub } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+
 import {
   DiCss3,
   DiHtml5,
@@ -10,7 +13,8 @@ import {
   DiNodejsSmall,
   DiPython,
   DiReact,
-  DiWordpress
+  DiWordpress,
+  
 } from "react-icons/di";
 import Reveal from "./Reveal";
 import { div } from "framer-motion/client";
@@ -25,7 +29,6 @@ const projects = [
       github: "https://github.com/MatheusLucas01/ListaDeTarefas",
       linguagens: [DiPython],
     },
-
   },
   {
     img: projeto2,
@@ -51,10 +54,22 @@ const projects = [
   {
     img: projeto4,
     title: "Projeto #4 - Institucional",
-    description: "Avante, feito com Wordpress. \n Antes de conhecer a programação",
+    description:
+      "Avante, feito com Wordpress. \n Antes de conhecer a programação",
     links: {
       site: "https://avantesso.com.br/",
       linguagens: [DiWordpress],
+    },
+  },
+  {
+    img: projeto5,
+    title: "Projeto #5 - Pessoal",
+    description:
+      "Meu portfolio pessoal. \n Feito para organização dos \nprojetos desenvolvidos",
+    links: {
+      site: "https://www.matheuscode.com.br/",
+      github: "https://github.com/MatheusLucas01/PortfolioPessoal",
+      linguagens: [DiReact, DiJavascript1, SiTailwindcss, DiCss3],
     },
   },
 ];
