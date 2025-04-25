@@ -18,8 +18,6 @@ import {
 } from "react-icons/di";
 import Reveal from "./Reveal";
 import { div } from "framer-motion/client";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -75,8 +73,6 @@ const projects = [
     },
   },
 ];
-
-const PreviewProjects = projects.slice(0, 3); // Show only the first 3 projects
 
 const Portfolio = () => {
   return (
